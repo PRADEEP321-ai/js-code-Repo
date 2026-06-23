@@ -47,8 +47,8 @@ x %= 3; // 1
 // 3. Comparison Operators
 // Return true or false.
 
-console.log(5 == "5");   // true (value only)
-console.log(5 === "5");  // false (value + type)
+console.log(5 == "5");   // true (value only) "==" check value only
+console.log(5 === "5");  // false (value + type) "===" check value and datatype also
 
 console.log(5 != "5");   // false
 console.log(5 !== "5");  // true
