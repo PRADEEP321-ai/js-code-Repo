@@ -27,4 +27,12 @@ console.log(arr2.indexOf(4));
 
 //slice, splice
 
-console.log();
+let arrDemo = [1,5,4,6,7,5,8,9];
+
+let result = arrDemo.slice(1,4); // The Slice method returns a shallow copy of a portion of an array into a new array 
+                                    //object selected from start to end (end not included) where start and end represent the 
+                                    // index of items in that array. The original array will not be modified.
+console.log(result);
+
+let result2 = arrDemo.splice(1,4);   //splice() is used to add, remove, or replace elements in an array and it modifies the original array.
+console.log(result2);
