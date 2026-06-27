@@ -36,8 +36,8 @@ const obj2 = {3 : "A", 4 : "B"};
 // const obj3 = Object.assign({}, obj1, obj2);
 // console.log(obj3);
 
-const obj3 = {...obj1, ...obj2};
-console.log(obj3);
+// const obj3 = {...obj1, ...obj2};
+// console.log(obj3);
 
 
 const users = [
@@ -63,13 +63,29 @@ let user1 = users[1].email;
 // console.log(user1);
 
 
-console.log(user);
-console.log(Object.keys(user));
-console.log(Object.values(user));
-console.log(Object.entries(user));
+// console.log(user);
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// console.log(Object.entries(user));
 
 
-console.log(user.hasOwnProperty('email'));
+// console.log(user.hasOwnProperty('email'));
+
+
+//+++++++++++++++++ Object Destruction ****************
+let course = {
+    courseName : "JavaScript",
+    price : 999,
+    courseInstructor : "hitesh"
+}
+
+const {courseInstructor: instruction} = course;
+// console.log(instruction);
+
+
+let {courseName, price} = course;
+console.log(courseName);
+console.log(price);
 
 
 
