@@ -17,7 +17,10 @@ console.log(num3.toPrecision(2)); // 11e+2
 console.log(num3.toPrecision(4)); // 112.3
 
 let num4 = 123456789
-console.log(num4.toLocaleString("en-IN"));
+console.log(num4.toLocaleString("en-IN", {
+    style : "currency",
+    currency : "INR"
+}));
 
 
 //+++++++++++++++++++++++ Math ++++++++++++++++++++++
