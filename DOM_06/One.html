@@ -1,0 +1,90 @@
+<!-- The Document Object Model (DOM) is a programming interface for HTML and XML documents. -->
+<!-- When a browser loads an HTML page, it doesn't simply display the HTML code. Instead, it converts the HTML into a tree-like structure of JavaScript objects, known as the DOM Tree. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Dom Learning <span>test text</span></h1>
+        <h1 id="title" class="heading">Dom Learning <span>test text</span></h1>
+
+        <h1 id="title" class="heading">Dom Learning <span>test text</span></h1>
+
+        <h1 id="title" class="heading">Dom Learning <span>test text</span></h1>
+
+        <h2>kjnerognejnrg;qerrg</h2>
+        <h2>
+            wjnerviwegnerg
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, consequatur.</p>
+
+        <img id="photo">
+
+        <ul>
+            <li class="item-class">img1</li>
+            <li class="item-class">img2</li>
+            <li class="item-class">img3</li>
+        </ul>
+    </div>
+
+    <script>
+        const title = document.getElementById('title');
+        // console.log(title);
+
+        const titleClass = document.getElementsByClassName('heading');
+        // console.log(titleClass);
+
+        const querySelector = document.querySelector('h1');
+        // console.log(querySelector);
+        
+        const querySelectorAll = document.querySelectorAll('h1');
+        // console.log(querySelectorAll);
+        
+        console.log(title.innerHTML); //Dom Learning <span>test text</span>
+        console.log(title.textContent); //Dom Learning test text
+
+        title.textContent = "Dom Tutorial"
+        console.log(title.textContent = "Dom Tutorial");
+        
+        let changeColor = title.style.backgroundColor ="green";
+        console.log(changeColor);
+        
+        const myul = document.querySelector('ul')
+        console.log(myul);
+
+        const turnGreen = myul.querySelector('li')
+        const turnGreen2 = myul.querySelectorAll('li') //NodeCollection = is not a pure array and remember that plz check prototype
+
+        console.log(turnGreen);
+        console.log(turnGreen2);
+        
+        turnGreen.style.backgroundColor = "green"
+        turnGreen.style.padding = '10px'
+
+        turnGreen2.forEach( (list) => list.style.color = "yellow");
+
+        const item = document.getElementsByClassName("item-class")
+        console.log(item);
+        
+        const myConvertedArray = Array.from(item)
+        myConvertedArray.forEach( (li) => {
+            li.style.color = "orange";
+            li.style.backgroundColor = "white";
+            li.style.padding = "10px";
+        })
+
+        
+    </script>
+</body>
+</html>
